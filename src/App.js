@@ -14,6 +14,8 @@ import TiposVariablesPractica from "./components/temas/TiposVariablesPractica";
 import Lupi from "./components/Lupi";
 import BlocklyEditor from "./components/BlocklyEditor";
 import BlocklyChallenge from "./components/BlocklyChallenge";
+import BlocklyCondiciones from "./components/BlocklyCondiciones";
+
 
 const PROGRESO_KEY = "progreso_v1";
 
@@ -255,6 +257,14 @@ function App() {
 
   if (pantalla === "reto1") {
     return <BlocklyChallenge />;
+  }
+
+  if (pantalla === "reto_condiciones") {
+  return (
+    <BlocklyCondiciones
+      setPantalla={setPantalla}
+    />
+  );
   }
 
   return null;

@@ -67,4 +67,50 @@ export function definirBloquesLupi() {
       });
     }
   };
+
+  // ------------------------------
+// BLOQUE: condicion simple texto
+// ------------------------------
+Blockly.Blocks["lupi_condicion_texto"] = {
+  init: function () {
+    this.appendDummyInput().appendField("mensaje es");
+    this.appendValueInput("TEXTO")
+        .setCheck("String")
+        .appendField("");
+    this.setOutput(true, "Boolean");
+    this.setColour(210);
+  },
+};
+
+// ------------------------------
+// BLOQUE: SI (if)
+// ------------------------------
+Blockly.Blocks["lupi_si"] = {
+  init: function () {
+    this.appendValueInput("COND")
+        .setCheck("Boolean")
+        .appendField("si");
+    this.appendStatementInput("DO").appendField("hacer");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+  },
+};
+
+// ------------------------------
+// BLOQUE: SI / SINO (if/else)
+// ------------------------------
+Blockly.Blocks["lupi_si_sino"] = {
+  init: function () {
+    this.appendValueInput("COND")
+        .setCheck("Boolean")
+        .appendField("si");
+    this.appendStatementInput("DO").appendField("hacer");
+    this.appendStatementInput("ELSE").appendField("si no");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+  },
+};
+
 }

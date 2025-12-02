@@ -39,6 +39,13 @@ export default function MenuPrincipal({ setPantalla }) {
           🦾 Reto 1 con Lupi
         </button>
 
+        <button
+          className="px-6 py-3 bg-purple-600 text-white rounded-xl shadow-lg"
+          onClick={() => setPantalla("reto_condiciones")}
+        >
+          🧠 Reto de Condiciones
+        </button>
+
         
 
       </div>
