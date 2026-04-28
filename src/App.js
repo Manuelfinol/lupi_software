@@ -15,6 +15,10 @@ import Lupi from "./components/Lupi";
 import BlocklyEditor from "./components/BlocklyEditor";
 import BlocklyChallenge from "./components/BlocklyChallenge";
 import BlocklyCondiciones from "./components/BlocklyCondiciones";
+import RetoCondiciones from "./components/blockly/RetoCondiciones";
+import RetoVariables from "./components/blockly/RetoVariables";
+
+
 
 
 const PROGRESO_KEY = "progreso_v1";
@@ -259,13 +263,21 @@ function App() {
     return <BlocklyChallenge />;
   }
 
+  // if (pantalla === "reto_condiciones") {
+  // return (
+  //   <BlocklyCondiciones
+  //     setPantalla={setPantalla}
+  //   />
+  // );
+  // }
+
   if (pantalla === "reto_condiciones") {
-  return (
-    <BlocklyCondiciones
-      setPantalla={setPantalla}
-    />
-  );
-  }
+  return <RetoCondiciones setPantalla={setPantalla} />;
+}
+
+if (pantalla === "reto_variables") {
+  return <RetoVariables setPantalla={setPantalla} />;
+}
 
   return null;
 }

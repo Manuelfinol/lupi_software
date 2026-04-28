@@ -46,7 +46,9 @@ export default function MenuPrincipal({ setPantalla }) {
           🧠 Reto de Condiciones
         </button>
 
-        
+        {/* <button onClick={() => setPantalla("reto_condiciones")}>
+          Reto de Condiciones
+        </button> */}
 
       </div>
     </div>

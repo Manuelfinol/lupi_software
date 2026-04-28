@@ -82,6 +82,13 @@ export default function VariablesPractica({ setPantalla, onComplete }) {
       {mensaje && <p className="text-lg mt-4">{mensaje}</p>}
 
       <button
+        className="mt-6 px-6 py-3 bg-purple-600 text-white text-xl rounded-xl shadow-lg hover:bg-purple-700 transition"
+        onClick={() => setPantalla("reto_variables")}
+      >
+        🧩 Ir al reto de Variables (Blockly)
+      </button>
+
+      <button
         className="mt-8 px-6 py-3 bg-red-500 text-white text-lg rounded-xl shadow-lg hover:bg-red-600 transition"
         onClick={() => setPantalla("aprender")}
       >
