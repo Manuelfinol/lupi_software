@@ -30,6 +30,7 @@ export default function BuclesTeoria({ setPantalla, onComplete }) {
       >
         ⬅ Volver a Aprender
       </button>
+      
     </div>
   );
 }

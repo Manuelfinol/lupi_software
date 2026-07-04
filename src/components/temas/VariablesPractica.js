@@ -91,7 +91,7 @@ export default function VariablesPractica({ setPantalla, onComplete }) {
       <button
         className="mt-8 px-6 py-3 bg-red-500 text-white text-lg rounded-xl shadow-lg hover:bg-red-600 transition"
         onClick={() => setPantalla("aprender")}
-      >
+      > 
         ⬅ Volver a Aprender
       </button>
     </div>

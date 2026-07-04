@@ -17,6 +17,7 @@ import BlocklyChallenge from "./components/BlocklyChallenge";
 import BlocklyCondiciones from "./components/BlocklyCondiciones";
 import RetoCondiciones from "./components/blockly/RetoCondiciones";
 import RetoVariables from "./components/blockly/RetoVariables";
+import RetoBucles from "./components/blockly/RetoBucles";
 
 
 
@@ -277,6 +278,10 @@ function App() {
 
 if (pantalla === "reto_variables") {
   return <RetoVariables setPantalla={setPantalla} />;
+}
+
+if (pantalla === "reto_bucles") {
+  return <RetoBucles setPantalla={setPantalla} />;
 }
 
   return null;

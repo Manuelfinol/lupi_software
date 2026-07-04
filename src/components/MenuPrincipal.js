@@ -46,6 +46,20 @@ export default function MenuPrincipal({ setPantalla }) {
           🧠 Reto de Condiciones
         </button>
 
+        <button
+          className="bg-indigo-600 text-white px-6 py-4 rounded-xl shadow-lg"
+          onClick={() => setPantalla("reto_variables")}
+        >
+          📦 Reto de Variables
+        </button>
+
+        <button
+  className="px-6 py-3 bg-orange-600 text-white rounded-xl"
+  onClick={() => setPantalla("reto_bucles")}
+>
+  🔁 Ir al reto Blockly de Bucles
+</button>
+
         {/* <button onClick={() => setPantalla("reto_condiciones")}>
           Reto de Condiciones
         </button> */}

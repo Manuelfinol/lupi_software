@@ -86,6 +86,14 @@ export default function BuclesPractica({ setPantalla, onComplete }) {
       >
         ⬅ Volver a Aprender
       </button>
+
+      <button
+  className="px-6 py-3 bg-orange-600 text-white rounded-xl"
+  onClick={() => setPantalla("reto_bucles")}
+>
+  🔁 Ir al reto Blockly de Bucles
+</button>
+
     </div>
   );
 }

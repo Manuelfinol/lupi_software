@@ -8,13 +8,40 @@ const imagenes = {
   default: "/lupi/lupi.png",
 };
 
-export default function Lupi({ mensaje, tipo = "info", emocion = "default", className = "" }) {
-  // tipo controla el color de la burbuja (info, exito, error)
+export default function Lupi({
+  mensaje,
+  tipo = "info",
+  emocion = "default",
+  className = "",
+  escenario = false,
+}) {
   const estilos = {
-    info: "bg-blue-100 border-blue-300 text-blue-900",
-    exito: "bg-green-100 border-green-400 text-green-900",
-    error: "bg-red-100 border-red-400 text-red-900",
-  };
+  info: "bg-blue-100 border-blue-300 text-blue-900",
+  exito: "bg-green-100 border-green-400 text-green-900",
+  error: "bg-red-100 border-red-400 text-red-900",
+};
+
+// ===== MODO ESCENARIO =====
+if (escenario) {
+  return (
+    <div className="relative">
+      <img
+        src={imagenes[emocion] || imagenes.default}
+        alt={`Lupi ${emocion}`}
+        className={`w-40 h-20 object-contain ${className}`}
+      />
+
+      {mensaje && (
+        <div className="absolute -top-8 left-24 bg-white border rounded-xl px-3 py-2 shadow-lg max-w-xs">
+          <p
+            className="text-lg"
+            dangerouslySetInnerHTML={{ __html: mensaje }}
+          />
+        </div>
+      )}
+    </div>
+  );
+}
 
   return (
     <div className="flex items-start gap-4 bg-white p-4 rounded-xl shadow-lg max-w-2xl mt-4">
